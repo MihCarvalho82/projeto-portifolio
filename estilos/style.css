@@ -161,13 +161,13 @@ article h2 {
   height: 8px;
   background-color: var(--fundo-principal);
   border-radius: 4px;
-}
+  }
 
 #skill-container .progresso {
   height: 100%;
   background-color: var(--destaque-inverso);
   border-radius: 4px;
-}
+  }
 
 #formacao-container {
   display: flex;
@@ -179,7 +179,7 @@ article h2 {
   background-color: var(--fundo-principal);
   border-radius: 8px;
   border-left: 5px solid var(--destaque-inverso);
-  padding-left: 15px;
+  padding: 15px;
   transition: border-width 0.5s, border-color 0.5s;
 }
 
@@ -201,10 +201,26 @@ article h2 {
   font-size: 1.1em;
 }
 
-/* Media Query Corrigida (width com h no final) */
 @media screen and (min-width: 768px) {
+  
   #skill-container {
+    display: grid;
+    /* Força APENAS 2 colunas */
+    grid-template-columns: 1fr 1fr; 
+    
+    /* Aumente o column-gap para empurrar uma coluna para longe da outra */
+    column-gap: 80px; /* Teste com 80px ou 100px para ver o efeito */
+    
+    row-gap: 30px; 
+    width: 100%;
+  }
+
+  /* Na formação, se quiser 2 colunas também: */
+  #formacao-container {
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px; /* Um espacinho entre as colunas fica legal */
+    column-gap: 80px; 
+    row-gap: 20px;
+    flex-direction: unset;
   }
 }
