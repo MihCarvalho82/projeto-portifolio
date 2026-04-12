@@ -230,6 +230,25 @@ article h2 {
   border-radius: 8px;
 }
 
+footer {
+    background-color: var(--destaque);
+    color: var(--texto-inverso);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: var(--texto-inverso);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--destaque-inverso);
+}
+
 @media screen and (min-width: 768px) {
   #skill-container {
     display: grid;
@@ -239,11 +258,18 @@ article h2 {
     width: 100%;
   }
 
-  #formacao-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 80px;
-    row-gap: 20px;
-    flex-direction: unset;
+  #projeto-container .projeto {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  #projeto-container .projeto-info {
+    max-width: 80%;
+  }
+
+  #projeto-container .foto {
+    aspect-ratio: 1/1;
+    max-width: 20%;
+    max-height: 200px;
   }
 }
