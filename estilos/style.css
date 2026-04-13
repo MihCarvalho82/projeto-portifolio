@@ -29,6 +29,15 @@ body {
   color: var(--texto);
 }
 
+body.escuro {
+  --fundo-principal: #121212;
+  --texto: #e0e0e0;
+  --texto-inverso: #333333;
+  --destaque: #0077ff;
+  --destaque-inverso: #a020f0;
+  --fundo-card: #444444;
+}
+
 header {
   background-color: var(--destaque);
   color: var(--texto);
@@ -94,6 +103,7 @@ section#ficha img.foto {
   display: block;
   margin: auto;
   margin-bottom: 15px;
+  
 }
 
 section#ficha h1 {
